@@ -1,0 +1,16 @@
+# Ignore heavy binaries (GitHub limit is 100MB)
+native-app/ffmpeg.exe
+native-app/ffprobe.exe
+
+# Ignore logs
+native-app/server.log
+*.log
+
+# Ignore python caches
+__pycache__/
+native-app/__pycache__/
+*.pyc
+
+# Ignore testing audio
+native-app/test_out_mix.mp3
+*.mp3

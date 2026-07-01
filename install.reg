@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Google\Chrome\NativeMessagingHosts\com.yt.downloader]
+@="C:\\yt-downloader-extension\\native-app\\app.json"
+
+[HKEY_CURRENT_USER\Software\Microsoft\Edge\NativeMessagingHosts\com.yt.downloader]
+@="C:\\yt-downloader-extension\\native-app\\app.json"

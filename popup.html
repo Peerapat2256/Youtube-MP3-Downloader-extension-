@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { width: 280px; padding: 15px; font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f9f9f9; margin: 0; }
+    h3 { color: #ff0000; margin-top: 0; }
+    .section { background: white; padding: 10px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 12px; }
+    .title { font-weight: bold; font-size: 13px; margin-bottom: 8px; color: #333; }
+    select, button { width: 100%; padding: 8px; margin-top: 5px; border-radius: 5px; border: 1px solid #ccc; box-sizing: border-box; }
+    button { background-color: #ff0000; color: white; border: none; font-weight: bold; cursor: pointer; margin-top: 10px; }
+    button:disabled { background-color: #ccc; cursor: not-allowed; }
+    .hidden { display: none; }
+    
+    /* สไตล์ส่วนสถานะดาวน์โหลด */
+    #status-zone { text-align: center; padding: 10px; border-radius: 5px; font-weight: bold; margin-top: 5px; display: none; }
+    .status-idle { background: #e2e3e5; color: #383d41; }
+    .status-loading { background: #fff3cd; color: #856404; animation: blink 1.5s infinite; }
+    .status-success { background: #d4edda; color: #155724; }
+    .status-error { background: #f8d7da; color: #721c24; }
+    @keyframes blink { 50% { opacity: 0.6; } }
+  </style>
+</head>
+<body>
+
+  <h3>🔻 YT Downloader Pro</h3>
+
+  <div id="main-content">
+    <div id="not-yt" class="hidden">
+      <p style="font-size: 12px; color: #666;">กรุณาเปิดหน้า YouTube ก่อนใช้งาน</p>
+    </div>
+
+    <div id="download-zone" class="hidden">
+      <div id="playlist-option" class="section hidden">
+        <div class="title">🔄 ตรวจพบเพลย์ลิสต์!</div>
+        <label><input type="radio" name="target" value="playlist" checked> ดาวน์โหลดทั้งเพลย์ลิสต์</label><br>
+        <label id="option-single-video"><input type="radio" name="target" value="single"> ดาวน์โหลดเฉพาะวิดีโอนี้</label>
+      </div>
+
+      <div class="section">
+        <div class="title">⚙️ ตั้งค่าการดาวน์โหลด</div>
+        <select id="format-select">
+          <option value="mp3_320">Audio (MP3 320kbps - Best)</option>
+          <option value="mp3_128">Audio (MP3 128kbps - Standard)</option>
+          <option value="m4a">Audio (M4A)</option>
+          <option value="mp4_1080">Video (MP4 - 1080p)</option>
+          <option value="mp4_720">Video (MP4 - 720p)</option>
+        </select>
+
+        <button id="download-btn">เริ่มดาวน์โหลดทันที</button>
+      </div>
+
+      <div id="status-zone" class="status-idle">เตรียมพร้อม</div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

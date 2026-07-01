@@ -1,0 +1,14 @@
+{
+  "name": "com.yt.downloader",
+  "description": "YT Downloader Backend Proxy",
+  "path": "C:\\Users\\keenz\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+  "args": [
+    "-u",
+    "C:\\Users\\keenz\\YT_Downloader_Extension\\native-app\\yt_proxy.py"
+  ],
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://gideepikgphlpecnogcolgoacedhicia/",
+    "extension://gideepikgphlpecnogcolgoacedhicia/"
+  ]
+}
