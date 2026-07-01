@@ -19,5 +19,8 @@ A browser extension designed to download and convert YouTube videos into MP3 aud
 ### 2. Configure the Native Host
 1. Run `register_host.bat` as Administrator to register the native messaging host in the Windows Registry.
 2. Ensure you have Python installed, along with required download libraries (e.g. `yt-dlp`).
-3. Download `ffmpeg.exe` and `ffprobe.exe` and place them inside the `native-app/` directory (these are excluded from the repository due to file size limits).
+3. Download `ffmpeg.exe` and `ffprobe.exe` (since they are excluded from this repository due to GitHub's file size limits):
+   * Download the latest release build from [gyan.dev FFmpeg Builds](https://www.gyan.dev/ffmpeg/builds/) (download `ffmpeg-release-essentials.zip`).
+   * Extract the downloaded zip file.
+   * Go to the extracted folder, enter the `bin/` directory, and copy both `ffmpeg.exe` and `ffprobe.exe` into the `native-app/` directory of this project.
 4. Run `run_server.bat` to start the backend listener.
